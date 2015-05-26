@@ -324,6 +324,7 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2;ok
 # running "Always show scrollbars"
 # defaults write NSGlobalDomain AppleShowScrollBars -string "Always";ok
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
+# TODO: check
 
 running "Increase window resize speed for Cocoa applications"
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001;ok
@@ -366,6 +367,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 
 running "Restart automatically if the computer freezes"
 sudo systemsetup -setrestartfreeze on;ok
+# TODO: check
 
 running "Never go into computer sleep mode"
 sudo systemsetup -setcomputersleep Off > /dev/null;ok
@@ -412,6 +414,7 @@ defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144;ok
 running "Follow the keyboard focus while zoomed in"
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true;ok
+# TODO: check
 
 running "Disable press-and-hold for keys in favor of key repeat"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false;ok
@@ -434,6 +437,7 @@ bot "Configuring the Screen"
 
 running "Require password immediately after sleep or screen saver begins"
 defaults write com.apple.screensaver askForPassword -int 1
+# TODO: test value
 defaults write com.apple.screensaver askForPasswordDelay -int 900;ok
 
 running "Save screenshots to the desktop"
@@ -445,6 +449,7 @@ defaults write com.apple.screencapture type -string "png";ok
 running "Disable shadow in screenshots"
 defaults write com.apple.screencapture disable-shadow -bool true;ok
 
+# TODO: check
 running "Enable subpixel font rendering on non-Apple LCDs"
 defaults write NSGlobalDomain AppleFontSmoothing -int 2;ok
 
@@ -560,9 +565,9 @@ defaults write com.apple.dock launchanim -bool false;ok
 running "Speed up Mission Control animations"
 defaults write com.apple.dock expose-animation-duration -float 0.1;ok
 
-running "Don’t group windows by application in Mission Control"
+# running "Don’t group windows by application in Mission Control"
 # (i.e. use the old Exposé behavior instead)
-defaults write com.apple.dock expose-group-by-app -bool false;ok
+# defaults write com.apple.dock expose-group-by-app -bool false;ok
 
 running "Disable Dashboard"
 defaults write com.apple.dashboard mcx-disabled -bool true;ok
@@ -573,10 +578,10 @@ defaults write com.apple.dock dashboard-in-overlay -bool true;ok
 # running "Don’t automatically rearrange Spaces based on most recent use"
 # defaults write com.apple.dock mru-spaces -bool false;ok
 
-running "Remove the auto-hiding Dock delay"
-defaults write com.apple.dock autohide-delay -float 0;ok
-running "Remove the animation when hiding/showing the Dock"
-defaults write com.apple.dock autohide-time-modifier -float 0;ok
+# running "Remove the auto-hiding Dock delay"
+# defaults write com.apple.dock autohide-delay -float 0;ok
+# running "Remove the animation when hiding/showing the Dock"
+# defaults write com.apple.dock autohide-time-modifier -float 0;ok
 
 running "Automatically hide and show the Dock"
 defaults write com.apple.dock autohide -bool true;ok
@@ -609,7 +614,7 @@ bot "Configuring Hot Corners"
 
 running "Bottom left screen corner → Put display to sleep"
 defaults write com.apple.dock wvous-bl-corner -int 10
-defaults write com.apple.dock wvous-tl-modifier -int 0;ok
+# defaults write com.apple.dock wvous-tl-modifier -int 0;ok
 
 # running "Top left screen corner → Mission Control"
 # defaults write com.apple.dock wvous-tl-corner -int 2
@@ -845,11 +850,11 @@ defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://
 bot "SizeUp.app"
 ###############################################################################
 
-running "Start SizeUp at login"
-defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true;ok
+# running "Start SizeUp at login"
+# defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true;ok
 
-running "Don’t show the preferences window on next start"
-defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false;ok
+# running "Don’t show the preferences window on next start"
+# defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false;ok
 
 ###############################################################################
 bot "NPM Globals..."
